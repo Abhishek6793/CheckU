@@ -8,7 +8,7 @@ const client = mongoose
     useNewUrlParser: true,
   })
   .then(() => {
-    console.log("DB connected");
+    console.log("Database connected");
   })
   .catch((error) => {
     console.log("Error: ", error);
