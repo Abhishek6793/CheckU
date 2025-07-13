@@ -1,7 +1,14 @@
 const express = require("express");
+const mongoose=require('mongoose');
 const cors = require("cors");
 require("dotenv").config();
 require("./db/conn");
+
+mongoose
+   .connect('mongodb://127.0.0.1:27017/healthcare_app')
+   .then(()=>console.log("MongoDB Connected"))
+   .catch((err)=>console.log("Mongo Error",err));
+
 const userRouter = require("./routes/userRoutes");
 const doctorRouter = require("./routes/doctorRoutes");
 const appointRouter = require("./routes/appointRoutes");
