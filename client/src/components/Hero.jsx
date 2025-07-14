@@ -11,9 +11,7 @@ const Hero = () => {
           Our Responsibility
         </h1>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-          tenetur doloremque molestias repellat minus asperiores in aperiam
-          dolor, quaerat praesentium.
+         Excellence in healthcare isn't just our promise—it's our standard. We're redefining what it means to care, with innovative treatments and unwavering dedication to your wellness. Your health journey deserves nothing less than extraordinary. Together, we'll unlock your potential for a healthier, brighter future.
         </p>
       </div>
       <div className="hero-img">
