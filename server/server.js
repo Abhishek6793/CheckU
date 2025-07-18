@@ -20,16 +20,18 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
-app.use("/user", userRouter);
-app.use("/doctor", doctorRouter);
-app.use("/appointment", appointRouter);
-app.use("/notification", notificationRouter);
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
+app.use("/api/user", userRouter);
+app.use("/api/doctor", doctorRouter);
+app.use("/api/appointment", appointRouter);
+app.use("/api/notification", notificationRouter);
 app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+app.listen(port, () => {});

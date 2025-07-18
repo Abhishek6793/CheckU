@@ -9,7 +9,7 @@ const schema = new mongoose.Schema(
     },
     lastname: {
       type: String,
-      required: true,
+      // required: true,
       minLength: 3,
     },
     email: {

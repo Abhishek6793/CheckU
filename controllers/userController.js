@@ -44,6 +44,8 @@ const login = async (req, res) => {
         expiresIn: "2 days",
       }
     );
+
+    console.log(emailPresent);
     return res.status(201).send({ msg: "User logged in successfully", token });
   } catch (error) {
     res.status(500).send("Unable to login user");
@@ -62,8 +64,10 @@ const register = async (req, res) => {
     if (!result) {
       return res.status(500).send("Unable to register user");
     }
+    console.log(result);
     return res.status(201).send("User registered successfully");
   } catch (error) {
+    console.log(error);
     res.status(500).send("Unable to register user");
   }
 };
